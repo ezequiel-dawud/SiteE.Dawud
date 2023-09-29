@@ -1,0 +1,333 @@
+.pure-menu-cell {
+    display: none;
+}
+
+.logo {
+    height: 24rem;
+    padding-left: 3.7rem;
+}
+
+.logo-cell {
+    display: none;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    margin: 1rem 0 1rem 0.7rem;
+}
+
+.svg:hover {
+    box-shadow: 2px 2px 20px 2px rgba(255, 255, 255, 0.712);
+}
+
+.svg {
+    color: #fff;
+    height: 3rem;
+    width: 3rem;
+    padding: 0.7rem;
+    background-color: rgba(124, 47, 196, 0.712);
+    border-radius: 50%;
+
+}
+
+
+
+/* Show the "Menu" button on phones */
+#nav .nav-menu-button {
+    display: block;
+    top: 0.5em;
+    right: 0.5em;
+    position: absolute;
+}
+
+/* When "Menu" is clicked, the navbar should be 80% height */
+#nav.active {
+    height: 100%;
+}
+
+/* Don't show the navigation items... */
+.nav-inner {
+    display: none;
+}
+
+/* ...until the "Menu" button is clicked */
+#nav.active .nav-inner {
+    display: block;
+    padding: 2em 0;
+}
+
+
+#nav .pure-menu {
+    background: transparent;
+    border: none;
+    text-align: left;
+}
+
+#nav .pure-menu-link:hover,
+#nav .pure-menu-link:focus {
+    background: rgb(55, 60, 90);
+}
+
+#nav .pure-menu-link {
+    color: #fff;
+    margin-left: 0.5em;
+}
+
+#nav .pure-menu-heading {
+    border-bottom: none;
+    font-size: 110%;
+    color: rgb(75, 113, 151);
+}
+
+
+
+@media (min-width: 40em) {
+
+    /* Move the layout over so we can fit the nav + list in on the left */
+    #layout {
+        padding-left: 50px;
+        /* "left col (nav + list)" width */
+        position: relative;
+
+    }
+
+    /* These are position:fixed; elements that will be in the left 500px of the screen */
+    #nav,
+    #list {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        overflow: auto;
+    }
+
+    #nav {
+        margin-left: -450px;
+        /* "left col (nav + list)" width */
+        width: 150px;
+        height: 100%;
+    }
+
+    /* Show the menu items on the larger screen */
+    .nav-inner {
+        display: block;
+        padding: 2em 0;
+    }
+}
+
+
+body {
+    background-image: linear-gradient(to right, #252A3A, #31253d);
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    position: relative;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-container {
+    width: 750px;
+    height: 750px;
+}
+
+swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+}
+
+
+swiper-slide:nth-child(1n) {
+    background-image: url(imagens/carrossel/IMG_5464.JPG);
+}
+
+swiper-slide:nth-child(2n) {
+    background-image: url(imagens/carrossel/IMG_5507.JPG);
+}
+
+swiper-slide:nth-child(3n) {
+    background-image: url(imagens/carrossel/IMG_5464.JPG);
+}
+
+swiper-slide:nth-child(4n) {
+    background-image: url(imagens/carrossel/IMG_5437.JPG);
+}
+
+swiper-slide:nth-child(5n) {
+    background-image: url(imagens/carrossel/IMG_5826.JPG);
+}
+
+swiper-slide:nth-child(6n) {
+    background-image: url(imagens/carrossel/IMG_5465.JPG);
+}
+
+swiper-slide:nth-child(7n) {
+    background-image: url(imagens/carrossel/IMG_5555.JPG);
+}
+
+swiper-slide:nth-child(8n) {
+    background-image: url(imagens/carrossel/IMG_5507.JPG);
+}
+
+swiper-slide:nth-child(9n) {
+    background-color: rgb(218, 12, 218);
+}
+
+swiper-slide:nth-child(10n) {
+    background-color: rgb(54, 94, 77);
+}
+
+swiper-slide {
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 800;
+    color: #000;
+}
+
+.glow-on-hover {
+    margin-top: 550px;
+    width: 7rem;
+    height: 2rem;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    background: #fffffff8;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #ececec
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5da;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+@media (max-width: 30em) {
+    swiper-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .glow-on-hover {
+        margin-top: 220px;
+
+    }
+
+    .logo-cell {
+        display: flex;
+        height: 15rem;
+        margin-left: 45vw;
+        margin-top: -80px;
+        margin-bottom: 30px;
+    }
+
+    .cell{
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .pure-menu-cell {
+        display: flex;
+        display: block;
+        flex-direction: row;
+        position: relative;
+    }
+
+    .icon {
+        margin-bottom: 0px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin: 3rem 1.5rem 0rem 0rem;
+    }
+
+    .svg {
+        height: 2rem;
+        width: 2rem;
+        padding: 0.7rem;
+
+    }
+
+    .lista-de-redes {
+        display: flex;
+    }
+
+
+}
